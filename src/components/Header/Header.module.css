@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-wrapper select {
+  display: none;
+}
