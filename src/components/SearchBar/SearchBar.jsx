@@ -10,10 +10,23 @@ const SearchBar = ({ fetchWord }) => {
     fetchWord(enteredWord);
   }
 
+  function handleKeyPress(e) {
+    if (e.keyCode === 13) {
+      const enteredWord = inputRef.current.value;
+      fetchWord(enteredWord);
+    }
+  }
+
   return (
     <section>
       <div className={styles['search-bar']}>
-        <input name="search" id="search" type="text" ref={inputRef}></input>
+        <input
+          name="search"
+          id="search"
+          type="text"
+          ref={inputRef}
+          onKeyDown={handleKeyPress}
+        ></input>
         <button onClick={handleInput}>
           <SearchIcon />
         </button>

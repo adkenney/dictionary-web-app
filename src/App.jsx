@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
-import SearchBar from './components/SearchBar/SearchBar';
 import Word from './components/Word/Word';
 
 function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [toggleTheme, setToggleTheme] = useState(true);
 
   const getWord = async input => {
     try {
@@ -17,7 +17,6 @@ function App() {
         throw new Error('No results!');
       }
       const resData = await response.json();
-      // console.log(resData);
       setData(resData);
       setLoading(false);
     } catch (error) {
@@ -25,15 +24,24 @@ function App() {
       setLoading(false);
     }
   };
+
+  const handleThemeToggle = () => {
+    setToggleTheme(!toggleTheme);
+  };
+
   useEffect(() => {
-    // getWord('');
+    getWord('keyboard');
   }, []);
 
   return (
     <main className="container">
-      <Header fetchWord={getWord} />
+      <Header
+        fetchWord={getWord}
+        toggle={toggleTheme}
+        handleToggle={handleThemeToggle}
+      />
       {loading && <div>Loading...</div>}
-      {/* {!loading && <Word wordData={data} />} */}
+      {!loading && <Word wordData={data} />}
     </main>
   );
 }
