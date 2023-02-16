@@ -24,6 +24,7 @@ const SearchBar = ({ fetchWord }) => {
           name="search"
           id="search"
           type="text"
+          placeholder="Search for any word..."
           ref={inputRef}
           onKeyDown={handleKeyPress}
         ></input>

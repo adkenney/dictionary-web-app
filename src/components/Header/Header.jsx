@@ -16,13 +16,12 @@ const Header = ({ fetchWord, toggle, handleToggle }) => {
   return (
     <header>
       <div className={styles['header']}>
-        <Logo />
-        <div>
+        <Logo className={styles['logo']} />
+        <div className={styles['header-widgets']}>
           <Dropdown placeHolder={'Sans Serif'} options={fontOptions} />
+          <div className={styles['header-divider']}></div>
           <ToggleSwitch toggle={toggle} handleToggle={handleToggle} />
-          <div>
-            <DarkIcon />
-          </div>
+          <DarkIcon className={styles['theme-icon']} />
         </div>
       </div>
       <SearchBar fetchWord={fetchWord} />

@@ -93,3 +93,8 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* CUSTOM STYLING */
+.container {
+  padding: 1.5em;
+}
