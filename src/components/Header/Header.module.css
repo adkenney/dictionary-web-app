@@ -1,3 +1,7 @@
+header {
+  margin-bottom: 1em;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -31,7 +35,8 @@
 }
 
 .header-divider {
-  border: 0.0625em solid #979797;
   height: 2em;
+  width: 0.0625em;
+  background-color: #979797;
   opacity: 0.3;
 }

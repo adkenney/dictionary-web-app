@@ -1,0 +1,54 @@
+.word-container,
+.word-header,
+.source a {
+  display: flex;
+}
+
+.word-container {
+  flex-direction: column;
+  gap: 1em;
+}
+
+.word-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.word-header h1 {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.word-header p {
+  font-size: 1.125rem;
+  color: var(--clr-secondary-100);
+  line-height: 1.5rem;
+  font-weight: var(--fw-regular);
+}
+
+.play-icon {
+  height: 3em;
+  width: 3em;
+}
+.source h3 {
+  color: #757575;
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.source li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.source a {
+  text-align: center;
+  align-items: center;
+  gap: 0.75em;
+  color: var(--clr-primary-600);
+}
+
+.source svg {
+  margin-bottom: 0.25em;
+}

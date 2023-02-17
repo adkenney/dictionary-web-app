@@ -1,0 +1,48 @@
+.definition-container,
+.speech-container,
+.synonym-container {
+  display: flex;
+}
+
+.definition-container {
+  flex-direction: column;
+  gap: 1em;
+}
+
+.speech-container {
+  align-items: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.speech-container h2 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.3rem;
+  font-style: italic;
+}
+
+.speech-divider {
+  height: 0.0625em;
+  width: 100%;
+  background-color: #979797;
+  opacity: 0.3;
+}
+
+.definition-info h3 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #757575;
+  opacity: 0.85;
+}
+
+.synonym-container {
+  align-items: center;
+  gap: 1em;
+}
+
+.synonym-container p {
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-secondary-100);
+}
