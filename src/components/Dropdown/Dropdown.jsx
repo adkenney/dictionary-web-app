@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../Dropdown/Dropdown.module.css';
 import { ReactComponent as ArrowIcon } from '../../assets/icon-arrow-down.svg';
 
-const Dropdown = ({ placeHolder, options }) => {
+const Dropdown = ({ theme, font, handleFont }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const menuBg = theme ? 'light' : 'dark';
 
-  function getSelectedValue() {
-    return placeHolder;
-  }
+  const handleFontSwitch = fontChoice => {
+    handleFont(fontChoice);
+  };
 
   useEffect(() => {
+    /* close dropdown menu when clicking outside of the menu */
     const handleMenu = () => {
       setShowMenu(false);
     };
@@ -27,26 +29,42 @@ const Dropdown = ({ placeHolder, options }) => {
 
   return (
     <div className={styles['dropdown-container']}>
-      <div className={styles['dropdown-input']} onClick={handleSelection}>
-        <div className={styles['dropdown-selected-value']}>
-          {getSelectedValue()}
+      <button onClick={handleSelection}>
+        {font === 'inter' && 'San Serif'}
+        {font === 'lora' && 'Serif'}
+        {font === 'inconsolata' && 'Mono'}
+        <ArrowIcon
+          className={showMenu ? styles['arrow-down'] : styles['arrow']}
+        />
+      </button>
+      {showMenu && (
+        <div className={`${styles[menuBg]} ${styles['dropdown-menu']}`}>
+          <p
+            className={styles['san-serif']}
+            onClick={() => {
+              handleFontSwitch('inter');
+            }}
+          >
+            San Serif
+          </p>
+          <p
+            className={styles['serif']}
+            onClick={() => {
+              handleFontSwitch('lora');
+            }}
+          >
+            Serif
+          </p>
+          <p
+            className={styles['mono']}
+            onClick={() => {
+              handleFontSwitch('inconsolata');
+            }}
+          >
+            Mono
+          </p>
         </div>
-        <div className={styles['dropdown-tools']}>
-          <div className={styles['dropdown-tool']}>
-            <ArrowIcon />
-          </div>
-        </div>
-      </div>
-      <div className={styles['dropdown-menu']}>
-        {showMenu &&
-          options.map(option => {
-            return (
-              <div key={option.value} className={styles['dropdown-item']}>
-                {option.label}
-              </div>
-            );
-          })}
-      </div>
+      )}
     </div>
   );
 };

@@ -96,12 +96,55 @@ select {
 
 /* CUSTOM STYLING */
 .container {
+  min-height: 100vh;
   padding: 1.5em;
 }
 
+/* LIGHT THEME */
+.light,
+.light input {
+  color: var(--clr-primary-800);
+}
+
+.light {
+  background-color: var(--clr-primary-100);
+  transition: all 0.5s ease;
+}
+
+.light input {
+  background-color: var(--clr-primary-200);
+}
+
+.light a {
+  color: var(--clr-primary-800);
+}
+/* LIGHT THEME */
+
+/* DARK THEME */
+.dark {
+  background-color: var(--clr-primary-800);
+  color: var(--clr-primary-100);
+  transition: all 0.5s ease;
+}
+
+.dark button,
+.dark input,
+.dark a {
+  color: var(--clr-primary-100);
+}
+
+.dark input {
+  background-color: var(--clr-primary-600);
+}
+
+/* DARK THEME*/
 li {
   margin-left: 1em;
   padding: 0.5em 0.75em 0.75em 0.75em;
+}
+
+li::marker {
+  color: var(--clr-secondary-100);
 }
 li p {
   font-size: 0.9375rem;
@@ -116,4 +159,16 @@ li p {
 
 .example-text {
   color: #757575;
+}
+
+.inter {
+  font-family: var(--ff-sans);
+}
+
+.lora {
+  font-family: var(--ff-serif);
+}
+
+.inconsolata {
+  font-family: var(--ff-mono);
 }

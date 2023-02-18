@@ -10,11 +10,12 @@ const Definition = ({ meaning }) => {
   const synonyms = meaning.synonyms.map(syn => {
     return (
       <>
-        <h3>Synonyms</h3>
         <p key={uniqid()}>{syn}</p>
       </>
     );
   });
+
+  let displaySynonymHeader = synonyms.length !== 0 ? true : false;
 
   return (
     <div className={styles['definition-container']}>
@@ -25,7 +26,10 @@ const Definition = ({ meaning }) => {
       <div className={styles['definition-info']}>
         <h3>Meaning</h3>
         <ul>{definitions}</ul>
-        <div className={styles['synonym-container']}>{synonyms}</div>
+        <div className={styles['synonym-container']}>
+          {displaySynonymHeader && <h3>Synonyms</h3>}
+          {synonyms}
+        </div>
       </div>
     </div>
   );

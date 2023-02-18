@@ -28,6 +28,10 @@ header {
   height: 1.25em;
 }
 
+.theme-icon:hover path {
+  stroke: var(--clr-secondary-100);
+}
+
 .header-widgets {
   display: flex;
   align-items: center;
@@ -39,4 +43,8 @@ header {
   width: 0.0625em;
   background-color: #979797;
   opacity: 0.3;
+}
+
+.icon-dark path {
+  stroke: var(--clr-secondary-100);
 }

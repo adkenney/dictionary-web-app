@@ -9,6 +9,7 @@
 }
 
 .search-bar {
+  justify-content: space-between;
   align-items: center;
   min-height: 3em;
   width: 100%;
@@ -18,7 +19,9 @@
 }
 
 .search-bar input {
+  width: 100%;
   border: none;
+  font-weight: var(--fw-bold);
 }
 
 .search-bar input:focus {
@@ -29,4 +32,12 @@
   align-items: center;
   border: none;
   background-color: inherit;
+}
+
+.dark {
+  background-color: var(--clr-primary-600);
+}
+
+.light {
+  background-color: var(--clr-primary-200);
 }

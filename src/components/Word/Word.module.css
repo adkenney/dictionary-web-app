@@ -30,6 +30,15 @@
   height: 3em;
   width: 3em;
 }
+
+.play-icon:hover circle {
+  opacity: 1;
+}
+
+.play-icon:hover path {
+  fill: var(--clr-primary-100);
+}
+
 .source h3 {
   color: #757575;
   opacity: 0.85;
@@ -43,7 +52,6 @@
 }
 
 .source a {
-  text-align: center;
   align-items: center;
   gap: 0.75em;
   color: var(--clr-primary-600);

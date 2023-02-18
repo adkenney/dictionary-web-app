@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from '../SearchBar/SearchBar.module.css';
 import { ReactComponent as SearchIcon } from '../../assets/icon-search.svg';
 
-const SearchBar = ({ fetchWord }) => {
+const SearchBar = ({ fetchWord, theme }) => {
   const inputRef = useRef();
 
   function handleInput() {
@@ -19,7 +19,11 @@ const SearchBar = ({ fetchWord }) => {
 
   return (
     <section>
-      <div className={styles['search-bar']}>
+      <div
+        className={`${theme ? styles['light'] : styles['dark']} ${
+          styles['search-bar']
+        }`}
+      >
         <input
           name="search"
           id="search"
