@@ -2,7 +2,7 @@
   position: relative;
   width: 2.5em;
   height: 1.25em;
-  background-color: #757575;
+  background-color: var(--clr-primary-400);
   border-radius: 0.625em;
   cursor: pointer;
 }

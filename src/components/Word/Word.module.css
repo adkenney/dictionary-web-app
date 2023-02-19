@@ -46,8 +46,7 @@
 }
 
 .source h3 {
-  color: #757575;
-  opacity: 0.85;
+  color: var(--clr-primary-400);
   text-decoration: underline;
 }
 

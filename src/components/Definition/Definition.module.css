@@ -25,15 +25,14 @@
 .speech-divider {
   height: 0.0625em;
   width: 100%;
-  background-color: #979797;
+  background-color: var(--clr-primary-400);
   opacity: 0.3;
 }
 
 .definition-info h3 {
   font-size: 1rem;
   line-height: 1.25rem;
-  color: #757575;
-  opacity: 0.85;
+  color: var(--clr-primary-400);
 }
 
 .synonym-container {
