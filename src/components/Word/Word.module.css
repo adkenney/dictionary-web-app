@@ -39,6 +39,12 @@
   fill: var(--clr-primary-100);
 }
 
+.source {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-body-s);
+}
+
 .source h3 {
   color: #757575;
   opacity: 0.85;
@@ -59,4 +65,24 @@
 
 .source svg {
   margin-bottom: 0.25em;
+}
+
+@media screen and (min-width: 48em) {
+  .word-header h1 {
+    font-size: var(--fs-heading-l);
+  }
+  .word-header p {
+    font-size: var(--fs-heading-m);
+  }
+
+  .play-icon {
+    height: 4.6em;
+    width: 4.6em;
+  }
+
+  .source {
+    flex-direction: row;
+    font-size: 1rem;
+    gap: 1em;
+  }
 }

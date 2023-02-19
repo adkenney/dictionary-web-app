@@ -54,7 +54,6 @@ const Word = ({ wordData }) => {
         <h3>Source</h3>
         <ul>{sourceUrls}</ul>
       </div>
-      <div></div>
     </section>
   );
 };

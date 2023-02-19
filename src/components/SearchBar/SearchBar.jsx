@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from '../SearchBar/SearchBar.module.css';
 import { ReactComponent as SearchIcon } from '../../assets/icon-search.svg';
 
-const SearchBar = ({ fetchWord, theme }) => {
+const SearchBar = ({ fetchWord, theme, error }) => {
   const inputRef = useRef();
 
   function handleInput() {
@@ -20,9 +20,9 @@ const SearchBar = ({ fetchWord, theme }) => {
   return (
     <section>
       <div
-        className={`${theme ? styles['light'] : styles['dark']} ${
-          styles['search-bar']
-        }`}
+        className={`${error ? styles['error'] : ''} ${
+          theme ? styles['light'] : styles['dark']
+        } ${styles['search-bar']}`}
       >
         <input
           name="search"
@@ -36,6 +36,11 @@ const SearchBar = ({ fetchWord, theme }) => {
           <SearchIcon />
         </button>
       </div>
+      {error && (
+        <div className={styles['empty-error']}>
+          <p>Whoops, can&apos;t be empty...</p>
+        </div>
+      )}
     </section>
   );
 };

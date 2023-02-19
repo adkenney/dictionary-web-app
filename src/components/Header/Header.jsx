@@ -13,13 +13,8 @@ const Header = ({
   theme,
   font,
   handleFont,
+  error,
 }) => {
-  const fontOptions = [
-    { value: 'Inter', label: 'San Serif' },
-    { value: 'Lora', label: 'Serif' },
-    { value: 'Inconsolata', label: 'Mono' },
-  ];
-
   return (
     <header>
       <div className={styles['header']}>
@@ -35,7 +30,7 @@ const Header = ({
           />
         </div>
       </div>
-      <SearchBar fetchWord={fetchWord} theme={theme} />
+      <SearchBar fetchWord={fetchWord} theme={theme} error={error} />
     </header>
   );
 };

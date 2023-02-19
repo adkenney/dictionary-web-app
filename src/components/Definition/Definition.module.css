@@ -38,6 +38,7 @@
 
 .synonym-container {
   align-items: center;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
@@ -45,4 +46,22 @@
   font-size: 1rem;
   font-weight: var(--fw-bold);
   color: var(--clr-secondary-100);
+}
+
+@media screen and (min-width: 48em) {
+  .speech-container h2 {
+    font-size: var(--fs-heading-m);
+  }
+
+  .definition-info h3 {
+    font-size: var(--fs-heading-s);
+  }
+
+  .definition-info p {
+    font-size: var(--fs-body-m);
+  }
+
+  .synonym-container p {
+    font-size: var(--fs-heading-s);
+  }
 }

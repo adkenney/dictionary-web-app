@@ -48,3 +48,15 @@ header {
 .icon-dark path {
   stroke: var(--clr-secondary-100);
 }
+
+@media screen and (min-width: 48em) {
+  .header,
+  .header button {
+    font-size: var(--fs-body-m);
+  }
+
+  .logo {
+    height: 2.25em;
+    width: 2em;
+  }
+}

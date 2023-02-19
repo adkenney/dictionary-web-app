@@ -95,14 +95,22 @@ select {
 }
 
 /* CUSTOM STYLING */
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   min-height: 100vh;
+  width: 46em;
+  max-width: 46em;
   padding: 1.5em;
 }
 
 /* LIGHT THEME */
 .light,
-.light input {
+.light input,
+.light button {
   color: var(--clr-primary-800);
 }
 
@@ -171,4 +179,10 @@ li p {
 
 .inconsolata {
   font-family: var(--ff-mono);
+}
+
+@media screen and (min-width: 48em) {
+  .container {
+    padding: 4em 2em;
+  }
 }
