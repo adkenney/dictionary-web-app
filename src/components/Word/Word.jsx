@@ -46,7 +46,11 @@ const Word = ({ wordData }) => {
           <h1>{word.word}</h1>
           <p>{word.phonetic}</p>
         </div>
-        <PlayIcon className={styles['play-icon']} onClick={handleAudio} />
+        <PlayIcon
+          className={styles['play-icon']}
+          onClick={handleAudio}
+          aria-label="pronunciation"
+        />
       </div>
       <div>{definition}</div>
       <div className="divider"></div>

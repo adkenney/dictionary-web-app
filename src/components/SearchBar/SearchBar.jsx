@@ -32,7 +32,7 @@ const SearchBar = ({ fetchWord, theme, error }) => {
           ref={inputRef}
           onKeyDown={handleKeyPress}
         ></input>
-        <button onClick={handleInput}>
+        <button aria-label="search" onClick={handleInput}>
           <SearchIcon />
         </button>
       </div>

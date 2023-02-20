@@ -29,7 +29,7 @@ const Dropdown = ({ theme, font, handleFont }) => {
 
   return (
     <div className={styles['dropdown-container']}>
-      <button onClick={handleSelection}>
+      <button aria-label="dropdown" onClick={handleSelection}>
         {font === 'inter' && 'San Serif'}
         {font === 'lora' && 'Serif'}
         {font === 'inconsolata' && 'Mono'}

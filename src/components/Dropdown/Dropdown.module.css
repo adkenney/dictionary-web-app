@@ -69,3 +69,9 @@
   background-color: var(--clr-primary-600);
   box-shadow: 0px 5px 30px #a445ed;
 }
+
+@media screen and (min-width: 48em) {
+  .dropdown-menu {
+    font-size: var(--fs-body-m);
+  }
+}

@@ -29,6 +29,7 @@
 .play-icon {
   height: 3em;
   width: 3em;
+  cursor: pointer;
 }
 
 .play-icon:hover circle {
